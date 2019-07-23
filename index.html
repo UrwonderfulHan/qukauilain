@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<title>区块链</title>
+	<link rel="stylesheet" href="//cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="//cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="//cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/Lunbo.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	img{
+		display: block;
+	}
+	#nav ul li a{
+		text-decoration: none;
+		color: #000;
+	}
+	.carousel-inner img{
+		width: 100%;
+		height: 550px !important;
+	}
+	.title{
+		width: 100%;
+		height: 100px;
+		margin: auto;
+		margin-top: 30px;
+		text-align: center;
+		
+	}
+	.title h2{
+		font-weight: normal;
+		font-size: 34px;
+	}
+	.title p{
+		font-size: 24px;
+		color: #878787;
+		margin-top: 7px;
+	}
+	
+	.ullist{
+		width: 100%;
+		margin-top: 30px;
+		
+		
+		display: flex;
+		justify-content: space-between;
+		
+	}
+	.ullist li{
+		float: left;
+		width:31%;
+		height: auto;
+		overflow: hidden;
+		margin-bottom: 40px;
+	}
+	.ullist li:hover {
+		   
+    transform: scale(1.1,1.1);
+    box-shadow: 1px 1px 15px rgba(0,0,0,.1);
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    position: relative;
+    color: cornflowerblue;
+   
+	}
+	.ullist li:hover p{
+		   
+    
+    color: cornflowerblue;
+   
+	}
+	.ullist li img{
+		width: 100%;
+	}
+	.ulli{
+		margin-top:10px ;
+	}
+	.text{
+		border: 1px solid #eaeaea;
+	    border-top: none;
+	    overflow: hidden;
+	    padding-bottom: 15px;
+	}
+	.text h2{
+		    font-size: 24px;
+		    text-align: center;
+		    margin: 20px 0 5px 0;
+	}
+	.text p{
+		font-size: 14px;
+	    color: #666;
+	    line-height: 24px;
+	    padding: 0 20px;
+	}
+	
+	.title2{
+		width: 100%;
+		height: 100px;
+		margin: auto;
+		margin-top: 30px;
+		text-align: center;
+		
+	}
+	.title2 h2{
+		font-weight: normal;
+		font-size: 34px;
+	}
+	.fangan_list ul{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 25px;
+	}
+	.fangan_list ul li{
+		float: left;
+		width: 18%;
+		padding: 40px 0;
+
+		border-radius: 5%;
+		position: relative;
+		cursor: pointer;
+		
+		box-shadow: 0px 0px 5px #888888;
+	}
+	.fangan_list li:hover{
+		transform: translateY(-15px);
+		transition: all 1s ease; 
+	
+	}
+	.fangan_list li:hover p{
+		 
+		color: royalblue;
+	}
+	.fangan_list ul li img{
+		margin: auto;
+		margin-top:10px ;
+	}
+	.fangan_list ul li h2{
+		font-size: 20px;
+		text-align: center;
+		font-weight: normal;
+	}
+	.fangan_list ul li p{
+		font-size: 14px;
+	    padding: 0 15px;
+	    line-height: 24px;
+	    color: #666;
+	}
+	.title3{
+	 	text-align: center;
+	 	padding: 30px;
+	}
+	.title3 h2{
+		font-weight: normal;
+		font-size: 34px;
+		
+	}
+	.title3 p{
+		font-size: 24px;
+		color: #878787;
+		margin-top: 7px;
+	}
+	.youshi ul{
+		display: flex;
+		justify-content:space-between;
+		transform-style: preserve-3d;
+	}
+	.youshi li{
+		float: left;
+		width: 23%;
+		border-radius: 5%;
+		-moz-box-shadow: 0px 0px 10px #888888; /* 老的 Firefox */
+		box-shadow: 0px 0px 10px #888888;
+		 background:#fff
+	}
+	/*.youshi li:hover{
+		
+		transform: rotate(-10deg);
+		 transition: all 0.2s linear;
+    -webkit-transition: all 1s linear;
+    background: #fff;
+    
+	}*/
+	.youshi img{
+		margin: auto;
+		margin-top: 30px ;
+	}
+	.youshi h2{
+		font-size: 24px;
+		text-align: center;
+	}
+	.youshi p{
+		    font-size: 14px;
+		    color: #878787;
+		    line-height: 24px;
+		    padding: 0 20px;
+		    margin-bottom: 20px;
+	}
+	.title4{
+	 	text-align: center;
+	 	padding: 30px;
+	}
+	.title4 h2{
+		font-weight: normal;
+		font-size: 34px;
+		
+	}
+	.title4 p{
+		font-size: 24px;
+		color: #878787;
+		margin-top: 7px;
+		}
+		
+		.Box {position: relative;}
+			.Box .content {width: 95%;margin: 0 auto;}
+			.Box h2 {text-align: center;margin-bottom: 35px;padding-top: 250px;}
+			.Box .Box_con {position: relative;}
+			.Box .Box_con .btnl {position: absolute;}
+			.Box .Box_con .btn {display: block;width: 41px;height: 41px;position: absolute;top: 160px;cursor: pointer;}
+			.Box .Box_con .btnl {background: url("img/jtl02.png")/*tpa=http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/jtl02.png*/ no-repeat center;left: -72px;}
+			.Box .Box_con .btnr {background: url("img/jtr02.png")/*tpa=http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/jtr02.png*/ no-repeat center;right: -72px;}
+			.Box .Box_con .btnl:hover {background: url("img/jtl03.png")/*tpa=http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/jtl03.png*/ no-repeat center;}
+			.Box .Box_con .btnr:hover {background: url("img/jtr03.png")/*tpa=http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/jtr03.png*/ no-repeat center;}
+			.Box .Box_con .conbox {position: relative;overflow: hidden;}
+			.Box .Box_con .conbox ul {position: relative;list-style: none;}
+			.Box .Box_con .conbox ul li {float: left;width: 10%;margin-left: 20px;overflow: hidden;}
+			.Box .Box_con .conbox ul li:first-child {margin-left: 0;}
+			.Box .Box_con .conbox ul li img {display: block;width: 86%;transition: all 0.5s;}
+			.Box .Box_con .conbox ul li:hover img {transform: scale(1.1);}
+			
+			.Box .BoxSwitch {margin-top: 30px;text-align: center;}
+			.Box .BoxSwitch span {display: inline-block;*display: inline;*zoom: 1;vertical-align: middle;width: 30px;height: 3px;background: #ccc;margin: 0 5px;cursor: pointer;}
+			.Box .BoxSwitch span.cur {background: red;}
+			.foot{
+				width: 100%;
+				margin: 50px auto;
+			}
+			.foot img{
+				width: 100%;
+			}
+			#nav{
+				padding-bottom: 105px;
+			}
+			#nav img{
+				float: left;
+				margin-left: 20px;
+			}
+			#nav ul{
+				float: right;
+				margin-right:60px ;
+			}
+			#nav ul li{
+				float: left;
+				padding: 0px 10px;
+				height: 96px;
+				line-height: 96px;
+				font-size: 18px;	
+			}
+			
+			
+</style>
+
+	<div id="nav">
+		
+  	<img src="img/navpic.png" />
+
+
+  	<ul >
+  		<li><a href="http://www.zgqywl.com/index.html">首页</a></li>
+		<li><a href="index.html">区块链</a></li>
+		<li><a href="jiaoyisuo.html">区块链交易所</a></li>
+		<li><a href="qianbao.html">区块链钱包</a></li>
+		<li><a href="jinrong.html">互联网金融+</a></li>
+		<li><a href="http://www.zgqywl.com/a/lianxifangshi/">联系我们</a></li>
+	</ul>
+
+	</div>
+  
+
+	
+
+
+<div id="myCarousel" class="carousel slide">
+	<!-- 轮播（Carousel）指标 -->
+	<ol class="carousel-indicators">
+		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li data-target="#myCarousel" data-slide-to="1"></li>
+		<li data-target="#myCarousel" data-slide-to="2"></li>
+	</ol>   
+	<!-- 轮播（Carousel）项目 -->
+	<div class="carousel-inner">
+		<div class="item active">
+			<img src="img/banner3.jpg" alt="First slide">
+		</div>
+		<div class="item">
+			<img src="img/banner2.jpg" alt="Second slide">
+		</div>
+		<div class="item">
+			<img src="img/banner1.jpg" alt="Third slide">
+		</div>
+	</div>
+	<!-- 轮播（Carousel）导航 -->
+	<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
+</div> 
+
+<!--<div class="container-fluid">-->
+<div class="container">
+  <div class="row">
+    <div class="title">
+    	<h2>丰富的产品</h2>
+    	<p>定制打造行业与消费者之间共赢的纽带与桥梁</p>
+    </div>
+  </div>
+  <div class="row">
+    <ul class="ullist">
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic1.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>钱包</h2>
+    			<p>独立APP网页区块链钱包定制，适应区块链行业ICO应用及实际落地多行业应用。</p>
+    		</div>
+    	</li>
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic2.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>代币</h2>
+    			<p>基于区块链技术，根据客户需求，提供定制主链发币及以太坊代币开发，独立区块链浏览器查询。</p>
+    		</div>
+    	</li>
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic3.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>数字货币交易所开发</h2>
+    			<p>定制开发币币交易系统，法币交易系统，场外交易系统及数字货币期货交易系统和分布式交易所。</p>
+    		</div>
+    	</li>
+    </ul>
+    <ul class="ullist ulli">
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic4.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>挖矿算力</h2>
+    			<p>在不断飙升的算力环境中，P时代的到来意味着比特币进入了一个新的军备竞赛阶段。</p>
+    		</div>
+    	</li>
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic5.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>白皮书</h2>
+    			<p>专业白皮书撰写团队帮助客户提供不同行业落地区块链的白皮书，协助发币一条龙服务。</p>
+    		</div>
+    	</li>
+    	<li>
+    		<div class="imgbox">
+    			<img src="img/pic6.jpg" />
+    		</div>
+    		<div class="text">
+    			<h2>虚拟币交易系统开发</h2>
+    			<p>支持币币交易+场外交易+USDT交易+合约交易四种交易模式。</p>
+    		</div>
+    	</li>
+    </ul>
+    
+    <div class="title2">
+    	<h2>我们为您提供多行业的智能合约解决方案</h2>
+    </div>
+    
+    <div class="fangan_list">
+    	<ul>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic1.png"/>
+    				<h2>数字身份</h2>
+    				<p>允许用户拥有和控制包含数据、信誉度和数字</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic2.png"/>
+    				<h2>宠物游戏</h2>
+    				<p>通过区块链技术，实现电子宠物的养成、交易、繁殖与竞技</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic3.png"/>
+    				<h2>竞猜游戏</h2>
+    				<p>通过区块链技术保障竞猜的规则不可篡改，保障游戏的公平</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic4.png"/>
+    				<h2>信息安全</h2>
+    				<p>文件上链，信息保全，无法篡改，可信背书</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic5.png"/>
+    				<h2>资产数字化</h2>
+    				<p>将实体资产数字化，实现确权，保障数字资产有效流通</p>
+    			</div>
+    		</li>
+    	</ul>
+    	<ul>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic6.png"/>
+    				<h2>商品溯源</h2>
+    				<p>商品全生命周期上链，信息可追踪</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic7.png"/>
+    				<h2>积分联盟</h2>
+    				<p>使用区块链记录积分信息，让积分可以交换和交叉使用/p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic8.png"/>
+    				<h2>加密资产游戏</h2>
+    				<p>加密名人、加密国家、加密地区、加密星球、加密品牌</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic9.png"/>
+    				<h2>供应链金融</h2>
+    				<p>供应链信息流与资金流的生命周期管理，提高业务效率，降低业务风险</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic10.png"/>
+    				<h2>财政数据</h2>
+    				<p>财政组织可以利用智能合约进行准确、透明的财务数据记录</p>
+    			</div>
+    		</li>
+    	</ul>
+    	<ul>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic11.png"/>
+    				<h2>合同存证</h2>
+    				<p>通过智能合约，保障电子合同的不可篡改与有效性</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic12.png"/>
+    				<h2>调研投票</h2>
+    				<p>通过区块链技术，可以保障调研和投票信息的真实性与保密性</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic13.png"/>
+    				<h2>资产拍卖</h2>
+    				<p>保障拍卖信息的私密性与不可篡改</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic14.png"/>
+    				<h2>金融借贷</h2>
+    				<p>有效保障金融借贷信息的不可抵赖性</p>
+    			</div>
+    		</li>
+    		<li>
+    			<div class="li_1">
+    				<img src="img/fanganpic15.png"/>
+    				<h2>股权合约</h2>
+    				<p>将项目信息、股权信息登记到区块链中，所有者通过各自的私钥控制数字股权</p>
+    			</div>
+    		</li>
+    	</ul>
+    </div>
+    
+    <div class="title3">
+    		<h2>产品优势</h2>
+    		<p>让您的系统插上区块链的翅膀</p>
+    </div>
+    
+    <div class="youshi">
+    	<ul>
+    		<li>
+    			<img src="img/youshi1.png"/>
+    			<h2>1.保障数据安全</h2>
+    			<p>银行级用户数据加密、动态身份验证，多级风险识别控制，保障交易安全；钱包多层加密，离线冷存储，资金第三方托管，层层环扣，确保资金安全。</p>
+    		</li>
+    		<li>
+    			<img src="img/youshi2.png"/>
+    			<h2>2.支持多币种开发</h2>
+    			<p>系统支持中英文，内置多种功能模块，可定制开发，支持多币种开发</p>
+    		</li>
+    		<li>
+    			<img src="img/youshi3.png"/>
+    			<h2>3.明确的区块链算法</h2>
+    			<p>构建容错的分布式系统所需的基础技术，以及一系列允许容错的协议和算法。</p>
+    		</li>
+    		<li>
+    			<img src="img/youshi4.png"/>
+    			<h2>4.一站式服务</h2>
+    			<p>提供整套解决方案，平台建站、定制开发、后期维护、运营支持、服务器代购、SSL认证等一站式服务</p>
+    		</li>
+    	</ul>
+    </div>
+    
+    <div class="title4">
+    	<h2>经典案例</h2>
+    	<p>专业性、创新性、增值性、应有尽有</p>
+    </div>
+    	
+    	 <div class="Box">
+    	<div class="content">
+    		
+    		
+    		<div class="Box_con clearfix">
+    			<span class="btnl btn" id="btnl"></span>
+    			<span class="btnr btn" id="btnr"></span>
+    			
+    			<div class="conbox" id="BoxUl">
+	    			<ul>
+	    				<li class="cur"><img src="img/zs1.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/1.jpg" alt=""/></li>
+	    				
+	    				<li class="cur"><img src="img/zs2.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/2.jpg" alt=""/></li>
+	    				
+	    				<li class="cur"><img src="img/zs3.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/3.jpg" alt=""/></li>
+	    			
+	    				<li class="cur"><img src="img/zs4.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/4.jpg" alt=""/></li>
+	    				
+	    				
+	    				<li class="cur"><img src="img/zs5.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/5.jpg" alt=""/></li>
+	    				<li class="cur"><img src="img/zs6.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/5.jpg" alt=""/></li>
+	    				<li class="cur"><img src="img/zs7.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/5.jpg" alt=""/></li>
+	    				<li class="cur"><img src="img/zs8.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/5.jpg" alt=""/></li>
+	    				<li class="cur"><img src="img/zs9.jpg" tppabs="http://www.17sucai.com/preview/952947/2017-12-29/lbthk/img/5.jpg" alt=""/></li>
+    				
+	    			</ul>
+    			</div>
+    			
+    			<p class="BoxSwitch" id="BoxSwitch">
+    				<span class="cur"></span>
+    				<span></span>
+    				<span></span>
+    				<span></span>
+    			</p>
+    			
+    		</div>
+    		
+    	</div>
+    </div>
+  </div>
+</div>
+<div class="foot">
+	<img src="img/footer.png" />
+	</div>
+</body>
+<script type="text/javascript">
+	LbMove('BoxUl','btnl','btnr','BoxSwitch',true,'left',true,305,1000,5000,4);
+</script>
+</html>
